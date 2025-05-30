@@ -5,6 +5,7 @@ from srcs.wormhole import load_wormholes
 
 EXAMPLES = [p for p in Path(".").glob("example-*")]
 
+
 @pytest.mark.parametrize("folder", EXAMPLES)
 def test_wormhole_pairs_are_valid(folder: Path):
     """

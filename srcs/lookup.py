@@ -13,7 +13,8 @@ The tables already include wormhole teleporting and the spec’s
 precedence rule (TOP > RIGHT > BOTTOM > LEFT).
 """
 
-from typing import Tuple, Dict, Tuple as Tup
+from typing import Dict
+from typing import Tuple
 import numpy as np
 
 from .wormhole import PairMap
@@ -53,12 +54,8 @@ def build_tables(
     col_idx = np.repeat(np.arange(width)[None, :], height, axis=0)
 
     # Stack into (H, W, 4) direction planes
-    nbr_r = np.stack(
-        [row_idx - 1, row_idx, row_idx + 1, row_idx], axis=2  # T, R, B, L
-    )
-    nbr_c = np.stack(
-        [col_idx, col_idx + 1, col_idx, col_idx - 1], axis=2
-    )
+    nbr_r = np.stack([row_idx - 1, row_idx, row_idx + 1, row_idx], axis=2)  # T, R, B, L
+    nbr_c = np.stack([col_idx, col_idx + 1, col_idx, col_idx - 1], axis=2)
 
     # Clamp edges so we stay in-bounds (effectively fixed-dead border)
     nbr_r = np.clip(nbr_r, 0, height - 1)
@@ -73,12 +70,12 @@ def build_tables(
         i_from, i_to = DIR_IDX[frm], DIR_IDX[to]
         for (r1, c1), (r2, c2) in pairs.items():
             nbr_r[r1, c1, i_from], nbr_c[r1, c1, i_from] = r2, c2
-            nbr_r[r2, c2, i_to],   nbr_c[r2, c2, i_to]   = r1, c1
+            nbr_r[r2, c2, i_to], nbr_c[r2, c2, i_to] = r1, c1
 
     # Apply in REVERSE precedence so later calls overwrite earlier ones
-    _apply(horiz, "left",  "right")   # lowest
-    _apply(vert,  "bottom","top")
+    _apply(horiz, "left", "right")  # lowest
+    _apply(vert, "bottom", "top")
     _apply(horiz, "right", "left")
-    _apply(vert,  "top",   "bottom")  # highest
+    _apply(vert, "top", "bottom")  # highest
 
     return nbr_r.astype(np.int32), nbr_c.astype(np.int32)

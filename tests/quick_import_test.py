@@ -2,7 +2,10 @@
 Quick sanity-check: can Python import srcs.wormhole when run from project root?
 Run once with `python tests/quick_import_test.py`.
 """
-import sys, pathlib, importlib, pprint
+
+import sys
+import pathlib
+import importlib
 
 # Put project root (parent of 'tests') onto sys.path FIRST
 ROOT = pathlib.Path(__file__).resolve().parents[1]

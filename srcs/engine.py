@@ -9,17 +9,20 @@ import numpy as np
 __all__ = ["step"]
 
 
-def _diag(board8: np.ndarray, nbr_r: np.ndarray, nbr_c: np.ndarray,
-          vert_dir: int, horiz_dir: int) -> np.ndarray:
+def _diag(
+    board8: np.ndarray,
+    nbr_r: np.ndarray,
+    nbr_c: np.ndarray,
+    vert_dir: int,
+    horiz_dir: int,
+) -> np.ndarray:
     """Helper to fetch diagonal neighbours via two look-ups."""
     r = nbr_r[nbr_r[:, :, vert_dir], nbr_c[:, :, vert_dir], horiz_dir]
     c = nbr_c[nbr_r[:, :, vert_dir], nbr_c[:, :, vert_dir], horiz_dir]
     return board8[r, c]
 
 
-def step(board: np.ndarray,
-         nbr_r: np.ndarray,
-         nbr_c: np.ndarray) -> np.ndarray:
+def step(board: np.ndarray, nbr_r: np.ndarray, nbr_c: np.ndarray) -> np.ndarray:
     """
     Parameters
     ----------
@@ -30,7 +33,7 @@ def step(board: np.ndarray,
     -------
     next_board : bool (H, W)
     """
-    board8 = board.astype(np.uint8)            # 0 / 1  – prevents “True+True = True”
+    board8 = board.astype(np.uint8)  # 0 / 1  – prevents “True+True = True”
 
     # Orthogonals
     n_t = board8[nbr_r[:, :, 0], nbr_c[:, :, 0]]
@@ -44,10 +47,8 @@ def step(board: np.ndarray,
     n_bl = _diag(board8, nbr_r, nbr_c, 2, 3)
     n_br = _diag(board8, nbr_r, nbr_c, 2, 1)
 
-    neighbour_sum = (
-        n_t + n_r + n_b + n_l + n_tl + n_tr + n_bl + n_br
-    )
+    neighbour_sum = n_t + n_r + n_b + n_l + n_tl + n_tr + n_bl + n_br
 
     survive = board & ((neighbour_sum == 2) | (neighbour_sum == 3))
-    born    = (~board) & (neighbour_sum == 3)
+    born = (~board) & (neighbour_sum == 3)
     return survive | born

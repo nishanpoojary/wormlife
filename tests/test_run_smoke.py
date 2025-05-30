@@ -1,6 +1,8 @@
 # tests/test_run_smoke.py
-import shutil, pathlib, os
+import shutil
+import pathlib
 from srcs.run_sim import main as run_sim
+
 
 def test_runner_produces_outputs(tmp_path):
     # Copy a tiny dataset to a temp folder so we don't overwrite originals
