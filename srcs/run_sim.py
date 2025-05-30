@@ -11,11 +11,9 @@ from srcs.engine import step
 
 MILESTONES = [1, 10, 100, 1000]
 
-
 def save_png(board: np.ndarray, outfile: Path) -> None:
     """White = live, Black = dead"""
     Image.fromarray(board.astype(np.uint8) * 255, mode="L").save(outfile)
-
 
 def main(folder: str) -> None:
     p = Path(folder)
@@ -32,7 +30,6 @@ def main(folder: str) -> None:
             out = p / f"{gen}.png"
             save_png(current, out)
             print("✓", out)
-
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

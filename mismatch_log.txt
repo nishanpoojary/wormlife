@@ -1,0 +1,157 @@
+
+example-0  gen 1
+  mismatch at (row=1, col=6)   ours=1  exp=0
+  mismatch at (row=1, col=21)   ours=1  exp=0
+  mismatch at (row=1, col=51)   ours=1  exp=0
+  mismatch at (row=5, col=16)   ours=1  exp=0
+  mismatch at (row=6, col=16)   ours=1  exp=0
+  mismatch at (row=6, col=21)   ours=1  exp=0
+  mismatch at (row=6, col=41)   ours=0  exp=1
+  mismatch at (row=7, col=21)   ours=1  exp=0
+  mismatch at (row=7, col=51)   ours=1  exp=0
+  mismatch at (row=20, col=21)   ours=1  exp=0
+  … 13 more pixels differ
+
+example-0  gen 10
+  mismatch at (row=1, col=21)   ours=1  exp=0
+  mismatch at (row=5, col=16)   ours=1  exp=0
+  mismatch at (row=6, col=16)   ours=1  exp=0
+  mismatch at (row=6, col=21)   ours=1  exp=0
+  mismatch at (row=7, col=21)   ours=1  exp=0
+  mismatch at (row=18, col=20)   ours=1  exp=0
+  mismatch at (row=18, col=21)   ours=1  exp=0
+  mismatch at (row=18, col=22)   ours=1  exp=0
+  mismatch at (row=20, col=18)   ours=1  exp=0
+  mismatch at (row=20, col=24)   ours=1  exp=0
+  … 13 more pixels differ
+
+example-0  gen 100
+  mismatch at (row=1, col=21)   ours=1  exp=0
+  mismatch at (row=5, col=16)   ours=1  exp=0
+  mismatch at (row=6, col=16)   ours=1  exp=0
+  mismatch at (row=6, col=21)   ours=1  exp=0
+  mismatch at (row=7, col=21)   ours=1  exp=0
+
+example-0  gen 1000
+  mismatch at (row=1, col=21)   ours=1  exp=0
+  mismatch at (row=5, col=16)   ours=1  exp=0
+  mismatch at (row=6, col=16)   ours=1  exp=0
+  mismatch at (row=6, col=21)   ours=1  exp=0
+  mismatch at (row=7, col=21)   ours=1  exp=0
+
+example-2  gen 1000
+  mismatch at (row=1, col=51)   ours=0  exp=1
+  mismatch at (row=1, col=52)   ours=0  exp=1
+  mismatch at (row=1, col=53)   ours=0  exp=1
+  mismatch at (row=2, col=57)   ours=0  exp=1
+  mismatch at (row=2, col=60)   ours=0  exp=1
+  mismatch at (row=3, col=56)   ours=0  exp=1
+  mismatch at (row=4, col=2)   ours=0  exp=1
+  mismatch at (row=4, col=56)   ours=0  exp=1
+  mismatch at (row=4, col=57)   ours=0  exp=1
+  mismatch at (row=5, col=3)   ours=0  exp=1
+  … 202 more pixels differ
+
+example-3  gen 1
+  mismatch at (row=101, col=0)   ours=1  exp=0
+  mismatch at (row=101, col=1)   ours=1  exp=0
+  mismatch at (row=102, col=0)   ours=1  exp=0
+  mismatch at (row=102, col=1)   ours=0  exp=1
+  mismatch at (row=110, col=0)   ours=1  exp=0
+  mismatch at (row=110, col=1)   ours=1  exp=0
+  mismatch at (row=111, col=0)   ours=1  exp=0
+  mismatch at (row=111, col=1)   ours=1  exp=0
+  mismatch at (row=112, col=434)   ours=0  exp=1
+  mismatch at (row=112, col=435)   ours=1  exp=0
+  … 25 more pixels differ
+
+example-3  gen 10
+  mismatch at (row=99, col=7)   ours=0  exp=1
+  mismatch at (row=101, col=0)   ours=1  exp=0
+  mismatch at (row=101, col=1)   ours=1  exp=0
+  mismatch at (row=101, col=2)   ours=1  exp=0
+  mismatch at (row=101, col=6)   ours=1  exp=0
+  mismatch at (row=101, col=7)   ours=1  exp=0
+  mismatch at (row=101, col=8)   ours=0  exp=1
+  mismatch at (row=102, col=0)   ours=1  exp=0
+  mismatch at (row=102, col=1)   ours=1  exp=0
+  mismatch at (row=102, col=2)   ours=1  exp=0
+  … 114 more pixels differ
+
+example-3  gen 100
+  mismatch at (row=66, col=14)   ours=1  exp=0
+  mismatch at (row=67, col=13)   ours=1  exp=0
+  mismatch at (row=67, col=15)   ours=1  exp=0
+  mismatch at (row=68, col=16)   ours=1  exp=0
+  mismatch at (row=69, col=11)   ours=1  exp=0
+  mismatch at (row=69, col=12)   ours=1  exp=0
+  mismatch at (row=69, col=13)   ours=1  exp=0
+  mismatch at (row=69, col=16)   ours=1  exp=0
+  mismatch at (row=70, col=10)   ours=1  exp=0
+  mismatch at (row=70, col=11)   ours=1  exp=0
+  … 887 more pixels differ
+
+example-3  gen 1000
+  mismatch at (row=5, col=295)   ours=0  exp=1
+  mismatch at (row=5, col=296)   ours=0  exp=1
+  mismatch at (row=6, col=295)   ours=0  exp=1
+  mismatch at (row=6, col=297)   ours=0  exp=1
+  mismatch at (row=7, col=295)   ours=0  exp=1
+  mismatch at (row=13, col=302)   ours=0  exp=1
+  mismatch at (row=13, col=303)   ours=0  exp=1
+  mismatch at (row=13, col=304)   ours=0  exp=1
+  mismatch at (row=14, col=302)   ours=0  exp=1
+  mismatch at (row=15, col=303)   ours=0  exp=1
+  … 6734 more pixels differ
+
+example-4  gen 1
+  mismatch at (row=1, col=319)   ours=1  exp=0
+  mismatch at (row=5, col=295)   ours=0  exp=1
+  mismatch at (row=5, col=361)   ours=0  exp=1
+  mismatch at (row=6, col=218)   ours=0  exp=1
+  mismatch at (row=7, col=343)   ours=0  exp=1
+  mismatch at (row=15, col=303)   ours=0  exp=1
+  mismatch at (row=18, col=309)   ours=0  exp=1
+  mismatch at (row=19, col=180)   ours=0  exp=1
+  mismatch at (row=20, col=180)   ours=1  exp=0
+  mismatch at (row=23, col=16)   ours=1  exp=0
+  … 2275 more pixels differ
+
+example-4  gen 10
+  mismatch at (row=0, col=137)   ours=1  exp=0
+  mismatch at (row=1, col=268)   ours=0  exp=1
+  mismatch at (row=3, col=399)   ours=0  exp=1
+  mismatch at (row=4, col=330)   ours=0  exp=1
+  mismatch at (row=5, col=345)   ours=0  exp=1
+  mismatch at (row=5, col=423)   ours=0  exp=1
+  mismatch at (row=6, col=58)   ours=0  exp=1
+  mismatch at (row=10, col=347)   ours=0  exp=1
+  mismatch at (row=13, col=116)   ours=0  exp=1
+  mismatch at (row=13, col=218)   ours=0  exp=1
+  … 5884 more pixels differ
+
+example-4  gen 100
+  mismatch at (row=1, col=268)   ours=0  exp=1
+  mismatch at (row=4, col=330)   ours=0  exp=1
+  mismatch at (row=24, col=81)   ours=0  exp=1
+  mismatch at (row=48, col=169)   ours=0  exp=1
+  mismatch at (row=49, col=159)   ours=1  exp=0
+  mismatch at (row=49, col=168)   ours=0  exp=1
+  mismatch at (row=49, col=170)   ours=0  exp=1
+  mismatch at (row=50, col=158)   ours=1  exp=0
+  mismatch at (row=50, col=160)   ours=1  exp=0
+  mismatch at (row=50, col=168)   ours=0  exp=1
+  … 2591 more pixels differ
+
+example-4  gen 1000
+  mismatch at (row=1, col=268)   ours=0  exp=1
+  mismatch at (row=4, col=330)   ours=0  exp=1
+  mismatch at (row=24, col=81)   ours=0  exp=1
+  mismatch at (row=48, col=169)   ours=0  exp=1
+  mismatch at (row=49, col=159)   ours=1  exp=0
+  mismatch at (row=49, col=168)   ours=0  exp=1
+  mismatch at (row=49, col=170)   ours=0  exp=1
+  mismatch at (row=50, col=158)   ours=1  exp=0
+  mismatch at (row=50, col=160)   ours=1  exp=0
+  mismatch at (row=50, col=168)   ours=0  exp=1
+  … 2564 more pixels differ
