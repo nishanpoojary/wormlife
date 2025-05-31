@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wormlife"
+version = "0.1.0"
+authors = [{ name="Your Name", email="you@example.com" }]
+description = "Conway’s Game of Life with Wormholes"
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+  "Pillow>=8.0", 
+  "numpy>=1.20", 
+  # etc.
+]
+[project.urls]
+"Homepage" = "https://github.com/nishanpoojary/wormlife"
+"Repository" = "https://github.com/nishanpoojary/wormlife.git"

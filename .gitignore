@@ -3,6 +3,5 @@ __pycache__/
 *.pyc
 *.png
 *.gif
-wormhole-interview-archive/
 .ruff_cache
 .pytest_cache
